@@ -12,14 +12,14 @@ int main()
     cin >> costo;
     cout << "ingresar la vida útil = ";
     cin >> vidaUtil;
+    cout << endl;
     depreciacion = (costo - valorRecuperacion) / vidaUtil;
     do
     {
         acumulado = acumulado + depreciacion;
         costo = costo - depreciacion;
         anio = anio + 1;
-        cout << endl
-             << " Año " << anio
+        cout << " Año " << anio
              << " Depreciación=" << depreciacion
              << " Depreciación acumulada=" << acumulado
              << " Valor anual=" << costo;

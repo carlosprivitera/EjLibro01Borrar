@@ -7,19 +7,19 @@ int main()
     float valorRecuperacion = 0;
     int anio = 0;
     float depreciacion = 0;
-    int acumulado = 0;
+    float acumulado = 0;
     cout << "Ingresar el costo = ";
     cin >> costo;
     cout << "ingresar la vida útil = ";
     cin >> vidaUtil;
+    cout << endl;
     depreciacion = (costo - valorRecuperacion) / vidaUtil;
     do
     {
         acumulado = acumulado + depreciacion;
         costo = costo - depreciacion;
         anio = anio + 1;
-        cout << endl
-             << " Año " << anio
+        cout << " Año " << anio
              << " Depreciación=" << depreciacion
              << " Depreciación acumulada=" << acumulado
              << " Valor anual=" << costo;
