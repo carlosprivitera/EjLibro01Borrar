@@ -1,5 +1,6 @@
 #include <iostream>
 #include <iomanip>
+#include <limits>
 using namespace std;
 int main()
 {
@@ -15,7 +16,8 @@ int main()
     do {
       cin >> costo;
       if(cin.fail()) {
-        cout << "Error de entrada, debe entrar un número";
+        cin.clear(); cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "Error de entrada, debe entrar un número = ";
       }else{
         tecladoError=false;
       }
@@ -29,12 +31,14 @@ int main()
       try {
        cin >> vidaUtil;
        if(cin.fail()) {
-         throw runtime_error("Error de entrada, debe entrar un número");
+         cin.clear(); cin.ignore(numeric_limits<streamsize>::max(), '\n');
+         cout << "Error de entrada, debe entrar un número = ";
        }else {
          tecladoError=false;
        }
       }catch(const exception &e) {
-        cout << "Código de error: " << e.what() << endl;
+        cout << endl << "Error de ejecución, el programa terminará. Código de error: " << e.what() << endl;
+        exit(1);
       }
     }while(tecladoError);
     tecladoError=true;
