@@ -10,7 +10,7 @@ int main()
     float acumulado = 0;
     cout << "Ingresar el costo = ";
     cin >> costo;
-    cout << "ingresar la vida útil = ";
+    cout << "Ingresar la vida útil = ";
     cin >> vidaUtil;
     cout << endl;
     depreciacion = (costo - valorRecuperacion) / vidaUtil;
